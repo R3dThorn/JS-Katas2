@@ -1,0 +1,10 @@
+:root {
+    box-sizing: border-box;
+}
+.Kata {
+    font-family: Arial, Helvetica, sans-serif;
+}
+button {
+    width: 75px;
+    margin: 3px;
+}

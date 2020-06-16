@@ -3,6 +3,13 @@ const sampleArray = [469, 755, 244, 245, 758, 450, 302, 20, 712, 71, 456, 21, 39
 const documentMain = document.getElementById('button-main')
 const documentSect = document.querySelector('section')
 const breaker = document.createElement('br')
+//duplicating sampleArray so when it is sorted by buttons
+//17 and 18, these values remain static and usable for
+//buttons 21 - 23
+let sortOrder = new Array()
+for (let i = 0; i < sampleArray.length; i++){
+    sortOrder[i] = sampleArray[i]
+}
 
 function headerAppend(alpha) {
     if (documentSect.childElementCount > 0){
@@ -18,6 +25,17 @@ function coolMath(beta, gamma){
     coolText.append(beta)
     coolText.className = "Kata " + gamma
     documentSect.append(coolText)
+}
+
+function cssRectangles(counter, width, backgroundColor) {
+    let coolVariable = document.createElement('div')
+    coolVariable.id = "Kata" + counter
+    documentSect.append(coolVariable)
+    let coolRectangle = document.getElementById('Kata' + counter)
+    coolRectangle.style.height = "20px"
+    coolRectangle.style.width = width
+    coolRectangle.style.backgroundColor = backgroundColor
+    coolRectangle.style.margin = "5px"
 }
 
 for(let i = 1; i <= 23; i++){
@@ -174,3 +192,51 @@ buttons18.addEventListener("click", function(){
     coolMath(sampleArray[0], 18)
 })
 
+const buttons19 = document.getElementById('button19')
+buttons19.addEventListener("click", function(){
+    headerAppend(19)
+    for(let index19 = 0; index19 < 20; index19++){
+        cssRectangles(index19, "100px", "gray")
+    }
+})
+
+const buttons20 = document.getElementById('button20')
+buttons20.addEventListener("click", function(){
+    let recWidths = (width) => 100 + (width * 5)
+    headerAppend(20)
+    for(let index20 = 1; index20 <= 20; index20++){
+        cssRectangles(index20, recWidths(index20) + "px", "gray")
+    }
+})
+
+const buttons21 = document.getElementById('button21')
+buttons21.addEventListener("click", function() {
+    headerAppend(21)
+    for(let index21 = 0; index21 < 20; index21++){
+        cssRectangles(index21, sortOrder[index21].toString() + "px", "gray")
+    }
+})
+
+const buttons22 = document.getElementById('button22')
+buttons22.addEventListener("click", function(){
+    headerAppend(22)
+    for(let index22 = 0; index22 < 20; index22++){
+        if (index22 % 2 === 0){
+            cssRectangles(index22, sortOrder[index22].toString() + "px", "red")
+        } else if (index22 % 2 === 1){
+            cssRectangles(index22, sortOrder[index22].toString() + "px", "gray")
+        }
+    }
+})
+
+const buttons23 = document.getElementById('button23')
+buttons23.addEventListener("click", function(){
+    headerAppend(23)
+    for(let index23 = 0; index23 < 20; index23++){
+        if (sortOrder[index23] % 2 === 0){
+            cssRectangles(index23, sortOrder[index23].toString() + "px", "red")
+        } else if (sortOrder[index23] % 2 === 1){
+            cssRectangles(index23, sortOrder[index23].toString() + "px", "gray")
+        }
+    }
+})

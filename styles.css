@@ -4,6 +4,9 @@
 .Kata {
     font-family: Arial, Helvetica, sans-serif;
 }
+h1{
+    font-family: sans-serif;
+}
 button {
     width: 75px;
     margin: 3px;

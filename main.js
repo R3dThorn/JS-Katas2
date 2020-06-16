@@ -167,8 +167,8 @@ buttons15.addEventListener("click", function(){
     let sum = 0
     for(let index15 = 1; index15 <= 20; index15++){
         sum += index15
-        coolMath(sum, 15)
     }
+    coolMath(sum, 15)
 })
 
 const buttons16 = document.getElementById('button16')

@@ -7,7 +7,7 @@
 body{
     display: relative;
     text-align: center;
-    width: 800px;
+    width: 850px;
     margin: 0 auto;
 }
 h1{
@@ -17,4 +17,12 @@ h1{
 button {
     width: 75px;
     margin: 3px;
+}
+ol {
+    font-size: 14px;
+    text-align: justify;
+    position: relative;
+    right: 11px;
+    width: 275px;
+    margin: 0 auto;
 }

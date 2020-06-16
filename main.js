@@ -11,19 +11,19 @@ for (let i = 0; i < sampleArray.length; i++){
     sortOrder[i] = sampleArray[i]
 }
 
-function headerAppend(alpha) {
+function headerAppend(counter) {
     if (documentSect.childElementCount > 0){
         documentSect.innerHTML = ""
     }
     let KataHeader = document.createElement("h1")
-    KataHeader.append("Kata " + alpha)
+    KataHeader.append("Kata " + counter)
     documentSect.append(KataHeader)
 }
 
-function coolMath(beta, gamma){
+function coolMath(var1, var2){
     let coolText = document.createElement('p')
-    coolText.append(beta)
-    coolText.className = "Kata " + gamma
+    coolText.append(var1)
+    coolText.className = "Kata " + var2
     documentSect.append(coolText)
 }
 

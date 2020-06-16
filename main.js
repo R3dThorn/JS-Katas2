@@ -180,16 +180,16 @@ buttons16.addEventListener("click", function(){
 const buttons17 = document.getElementById('button17')
 buttons17.addEventListener("click", function(){
     headerAppend(17)
-    sampleArray.sort((a, b) => a - b)
+    sortOrder.sort((a, b) => a - b)
     // coolText.append("[", sampleArray, "]", breaker)
-    coolMath(sampleArray[0], 17)
+    coolMath(sortOrder[0], 17)
 })
 
 const buttons18 = document.getElementById('button18')
 buttons18.addEventListener("click", function(){
     headerAppend(18)
-    sampleArray.sort((a, b) => b - a)
-    coolMath(sampleArray[0], 18)
+    sortOrder.sort((a, b) => b - a)
+    coolMath(sortOrder[0], 18)
 })
 
 const buttons19 = document.getElementById('button19')
@@ -213,7 +213,7 @@ const buttons21 = document.getElementById('button21')
 buttons21.addEventListener("click", function() {
     headerAppend(21)
     for(let index21 = 0; index21 < 20; index21++){
-        cssRectangles(index21, sortOrder[index21].toString() + "px", "gray")
+        cssRectangles(index21, sampleArray[index21].toString() + "px", "gray")
     }
 })
 
@@ -222,9 +222,9 @@ buttons22.addEventListener("click", function(){
     headerAppend(22)
     for(let index22 = 0; index22 < 20; index22++){
         if (index22 % 2 === 0){
-            cssRectangles(index22, sortOrder[index22].toString() + "px", "red")
+            cssRectangles(index22, sampleArray[index22].toString() + "px", "red")
         } else if (index22 % 2 === 1){
-            cssRectangles(index22, sortOrder[index22].toString() + "px", "gray")
+            cssRectangles(index22, sampleArray[index22].toString() + "px", "gray")
         }
     }
 })
@@ -234,9 +234,9 @@ buttons23.addEventListener("click", function(){
     headerAppend(23)
     for(let index23 = 0; index23 < 20; index23++){
         if (sortOrder[index23] % 2 === 0){
-            cssRectangles(index23, sortOrder[index23].toString() + "px", "red")
+            cssRectangles(index23, sampleArray[index23].toString() + "px", "red")
         } else if (sortOrder[index23] % 2 === 1){
-            cssRectangles(index23, sortOrder[index23].toString() + "px", "gray")
+            cssRectangles(index23, sampleArray[index23].toString() + "px", "gray")
         }
     }
 })
